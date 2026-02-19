@@ -334,32 +334,76 @@
     .pillar p { font-size: 0.76rem; color: #8b6070; line-height: 1.65; }
 
     /* ── CONTACT ── */
-    #contact { background: var(--blush); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-    .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 2.2rem; box-shadow: 0 12px 44px var(--shadow); }
-    .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--deep); }
-    .form-row { margin-bottom: 1rem; }
-    .form-row label { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mauve); margin-bottom: 0.38rem; }
-    .form-row input, .form-row textarea {
-      width: 100%; padding: 0.72rem 1rem;
-      border: 1.5px solid var(--border); border-radius: 12px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.86rem;
-      background: var(--blush); color: var(--deep);
-      transition: border-color 0.2s; outline: none; resize: none;
-    }
-    .form-row input:focus, .form-row textarea:focus { border-color: var(--petal); }
-    .form-row textarea { height: 108px; }
-    .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--deep); }
-    .contact-info p { color: #7a5060; font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.7rem; }
-    .link-item {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 0.85rem 1.1rem; border: 1px solid var(--border);
-      border-radius: 14px; margin-bottom: 0.65rem;
-      text-decoration: none; color: var(--deep); background: var(--white); transition: all 0.22s;
-    }
-    .link-item:hover { border-color: var(--petal); color: var(--plum); transform: translateX(5px); box-shadow: 0 4px 16px var(--shadow); }
-    .link-icon { width: 38px; height: 38px; background: linear-gradient(135deg,#fce8ec,#f5d0da); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .link-text .lt { font-size: 0.68rem; color: var(--mauve); }
-    .link-text .lv { font-size: 0.84rem; font-weight: 600; color: var(--deep); }
+#contact {
+  background: var(--blush);
+  display: grid;
+  place-items: center; /* centers content horizontally & vertically */
+  height: 100vh;       /* optional: makes section full viewport height */
+  padding: 2rem;
+}
+
+.contact-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--deep);
+  text-align: center; /* centers heading text */
+}
+
+.contact-info p {
+  color: #7a5060;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.7rem;
+  text-align: center; /* centers paragraph text */
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 0.65rem;
+  text-decoration: none;
+  color: var(--deep);
+  background: var(--white);
+  transition: all 0.22s;
+  justify-content: center; /* centers link content */
+}
+
+.link-item:hover {
+  border-color: var(--petal);
+  color: var(--plum);
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.link-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg,#fce8ec,#f5d0da);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.link-text .lt {
+  font-size: 0.68rem;
+  color: var(--mauve);
+}
+
+.link-text .lv {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--deep);
+}
+
 
     /* ── FOOTER ── */
     footer {
@@ -711,7 +755,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-info reveal">
-    <div class="section-tag">Say Hello</div>
+    <div class="section-tag">Contact Me</div>
     <h3>Let's Work Together ✨</h3>
     <p>I'm open to graduate roles, junior developer positions, and exciting projects. Don't hesitate to reach out — I'd love to hear from you!</p>
     <a href="mailto:promlyboloka@gmail.com" class="link-item">
@@ -734,26 +778,6 @@
     </a>
   </div>
 
-  <div class="contact-form reveal">
-    <h3>Send a Message 💌</h3>
-    <div class="form-row">
-      <label>Your Name</label>
-      <input type="text" placeholder=""/>
-    </div>
-    <div class="form-row">
-      <label>Email Address</label>
-      <input type="email" placeholder=""/>
-    </div>
-    <div class="form-row">
-      <label>Subject</label>
-      <input type="text" placeholder="Job Opportunity / Collaboration"/>
-    </div>
-    <div class="form-row">
-      <label>Message</label>
-      <textarea placeholder="Tell me about the opportunity or project..."></textarea>
-    </div>
-    <button class="btn btn-primary" style="width:100%;justify-content:center;border-radius:12px;">Send Message ✨</button>
-  </div>
 </section>
 
 <!-- FOOTER -->
